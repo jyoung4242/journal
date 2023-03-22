@@ -1,0 +1,171 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  background-color: var(--current-background);
+}
+
+.color1 {
+  color: #131617;
+}
+.color2 {
+  color: #34393c;
+}
+.color3 {
+  color: #5e676b;
+}
+.color4 {
+  color: #929fa4;
+}
+.color5 {
+  color: #d0e3e9;
+}
+
+:root {
+  /* Dark theme */
+  --dark-background: #34393c;
+  --dark-dark-accent: #131617;
+  --dark-neutral: #5e676b;
+  --dark-light-accent: #929fa4;
+  --dark-foregeound: #d0e3e9;
+  /* Light theme */
+  --light-background: #d0e3e9;
+  --light-dark-accent: #131617;
+  --light-foregeound: #34393c;
+  --light-neutral: #5e676b;
+  --light-light-accent: #929fa4;
+
+  /* Defaults */
+  --current-background: var(--light-background);
+  --current-dark-accent: var(--light-dark-accent);
+  --current-light-accent: var(--light-light-accent);
+  --current-foreground: var(--light-foregeound);
+  --current-neutral: var(--light-neutral);
+}
+
+.journal_title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #cd0000;
+  margin-left: 25px;
+  font-size: 20px;
+  text-decoration: underline;
+  letter-spacing: -2px;
+  text-align: left;
+}
+
+.journal_title > span {
+  font-size: 12px;
+  letter-spacing: normal;
+  padding-left: 10px;
+}
+
+.journal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: #131617 2px solid;
+
+  background-image: url("./assets/papertexture.jpg");
+  background-color: #ebf1a6fd;
+  background-blend-mode: multiply;
+  width: 600px;
+  aspect-ratio: 1/1.2;
+  margin: 0 auto;
+  padding: 0;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: transform 0.4s ease-in-out;
+}
+
+.journal.pui-adding {
+  transform: translate(-250%, -50%);
+}
+.journal.pui-removing {
+  transform: translate(-250%, -50%);
+}
+
+#list {
+  color: #313131;
+  font-size: 11.5px;
+  padding: 0 !important;
+  width: 598px;
+  font-family: courier, monospace;
+  border: 1px solid #93c8ec;
+}
+
+#list > li {
+  user-select: none;
+  list-style: none;
+  border-bottom: 1px dotted #93c8ec;
+  height: auto;
+  padding: 3px;
+  text-transform: capitalize;
+  position: relative;
+}
+
+li.header {
+  text-indent: 4px;
+  text-decoration: underline;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.marker {
+  background-image: url("./assets/red-mark.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -5px;
+  left: 50px;
+  width: 21%;
+  aspect-ratio: 4/1;
+  z-index: 2;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bumpright {
+  padding-right: 20px;
+}
+
+.left {
+  justify-content: space-between;
+}
+
+li.entry {
+  text-indent: 25px;
+}
+
+#list > li:hover {
+  background-color: #f0f0f0;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+.lines {
+  border-left: 1px solid #ffaa9f;
+  border-right: 1px solid #ffaa9f;
+  width: 2px;
+  float: left;
+  height: 95%;
+  margin-left: 40px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --current-background: var(--dark-background);
+    --current-foreground: var(--dark-foregeound);
+    --current-dark-accent: var(--dark-dark-accent);
+    --current-light-accent: var(--dark-light-accent);
+    --current-neutral: var(--dark-neutral);
+  }
+}
