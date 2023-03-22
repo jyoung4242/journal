@@ -144,7 +144,7 @@ li.entry {
 }
 
 #list > li:hover {
-  background-color: #f0f0f0;
+  background-color: #f0f0f070;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
